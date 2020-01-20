@@ -28,7 +28,7 @@ http: urllib3.PoolManager = urllib3.PoolManager(
 pattern = re.compile("^[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}$")
 
 
-class CAPWatchToSQLite(object):
+class CapwatchToSQLite(object):
 
     def __init__(self) -> None:
         """Constructor
@@ -100,6 +100,7 @@ class CAPWatchToSQLite(object):
             db_name {str} -- [description]
         """
 
+        print(f"DB File: {self.config.db_file}")
         # Create a new SQLite3 DB file
         self.db = sqlite3.connect(self.config.db_file)
 
@@ -239,6 +240,6 @@ class CAPWatchToSQLite(object):
 
 if __name__ == "__main__":
 
-    cw_to_db = CAPWatchToSQLite()
+    cw_to_db = CapwatchToSQLite()
     cw_to_db.get_capwatch_data()
     cw_to_db.create_db()

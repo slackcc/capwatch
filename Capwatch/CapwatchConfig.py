@@ -10,6 +10,11 @@ log.setLevel(os.environ.get("LOGLEVEL", "INFO"))
 class CapwatchConfig(object):
 
     def __init__(self, config_file=f"{Path.home()}/.capwatch/config.json"):
+        """[summary]
+        
+        Keyword Arguments:
+            config_file {[type]} -- [description] (default: {f"{Path.home()}/.capwatch/config.json"})
+        """
 
         self.config_file = config_file
 
@@ -26,6 +31,8 @@ class CapwatchConfig(object):
         self.__read_env__()
 
     def __read_config_file__(self) -> None:
+        """[summary]
+        """
 
         try:
             with open(self.config_file, "rb") as cf:
@@ -44,6 +51,9 @@ class CapwatchConfig(object):
             pass
     
     def __read_env__(self) -> None:
+        """Check to see if the environment variables exist and set
+        the class variables if they do
+        """
 
         if os.environ.get("CAPWATCH_BASE_URL"):
             self.base_url = os.environ.get("CAPWATCH_BASE_URL")
@@ -58,6 +68,11 @@ class CapwatchConfig(object):
             self.db_file = os.environ.get("CAPWATCH_DB_FILE")
 
     def validate(self) -> bool:
+        """[summary]
+        
+        Returns:
+            bool -- [description]
+        """
 
         self.errors = []
 

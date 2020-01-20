@@ -1,0 +1,6 @@
+{
+    "base_url": "https://<BASE_URL FROM CAPWATCH NOT INCLUDING PARAMETERS",
+    "token": "<AUTHENTICATION TOKEN FROM CAPWATCH>",
+    "org_id": "<ORG ID FROM CAPWATCH",
+    "db_file": "<PATH TO YOUR CAPWATCH FILE>/capwatch_mawg.db"
+}
