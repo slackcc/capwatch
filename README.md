@@ -6,7 +6,8 @@ This package provides a utility to download CAPWatch data and store it locally i
 
 All of the CAPWatch utilities require configuration utilizing either a configuration file or environment variables. If both a configuration file and environment variables are present the environment variables will override the configuration file values.
 
-By default the configuration file is stored relative to the application user's home directory in a directory called ".capwatch" and in a file called config.json (i.e. - ~/.capwatch/config.json). See config.sample.json in this package for an example file.
+By default the configuration file is stored relative to the application user's home directory in a directory called ".capwatch" and in a file called config.json (i.e. - ~/.capwatch/config.json). See config.sample.json in this package for an example file. See table below for config and corresponding environment variable names and sample values.
+
 
 | Config File | Env Variable      | Sample Value                               |
 | :---------- | :---------------- | :----------------------------------------- |
