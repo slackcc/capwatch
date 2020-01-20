@@ -2,8 +2,6 @@
 
 This package provides a utility to download CAPWatch data and store it locally in an SQLite3 database file as well as a variety of utility classes to utilize the CAPWatch data when stored in the SQLite DB.
 
-## Installation
-
 ## Config
 
 All of the CAPWatch utilities require configuration utilizing either a configuration file or environment variables. If both a configuration file and environment variables are present the environment variables will override the configuration file values.
